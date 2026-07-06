@@ -162,7 +162,6 @@ embed,
 object,
 video {
   max-width: 100%;
-  height: 80%;
 }
 
 ul {
@@ -3574,29 +3573,29 @@ a.text-theme:hover,
     font-weight: 500;
 }
 
-/* --- TRUCO DE DESPLAZAMIENTO VERTICAL (Asimetría Más Linda) --- */
+.col-auto {
+  display: flex;
+  align-items: center;
+}
+
 @media (min-width: 992px) {
-    /* Forzamos que la fila contenedora les permita moverse libremente en vertical */
     .row.align-items-center {
         align-items: stretch !important; 
     }
 
-    /* Empuja la Visión hacia la parte superior de la imagen */
     .bento-top-align {
         margin-top: -30px;
         margin-bottom: auto;
     }
 
-    /* Empuja la Misión hacia la parte inferior de la imagen */
     .bento-bottom-align {
         margin-top: auto;
         margin-bottom: -30px;
     }
 
-    /* Líneas finas estilizadas que se estiran elegantemente */
     .border-right-line {
         border-right: 1px solid rgba(255, 255, 255, 0.25);
-        height: 75%; /* No tocan el fondo completo, se ven más finas */
+        height: 75%;
     }
     
     .border-left-line {
@@ -4378,7 +4377,7 @@ a.text-theme:hover,
 /* Extra small devices */
 @media (max-width: 575px) {
   .header-layout1 .header-logo img {
-    max-width: 160px;
+    max-width: 260px;
   }
 }
 
@@ -6061,14 +6060,10 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     z-index: 3; /* Asegura que el texto vuele sobre el overlay oscuro */
 }
 
-/* Estilo para el área del Logo */
-.hero-logo-wrap {
-    margin-bottom: 25px;
-}
 
 .hero-logo-wrap>img {
-  width: 500px;
-  height: 500px;
+  width: auto;
+  object-fit: contain;
 }
 
 .hero-corporate-logo {
@@ -6195,11 +6190,10 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     z-index: 60;
 }
 
-/* Barra en estado inicial (top): transparente con texto e iconos blancos */
 .hero-video-header .menu-area {
     background-color: transparent;
-    padding-top: 8px; /* compacto */
-    padding-bottom: 8px; /* compacto */
+    padding-top: 8px;
+    padding-bottom: 8px;
     transition: background-color 220ms ease, color 220ms ease;
 }
 
@@ -6211,11 +6205,9 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
 }
 
 .hero-video-header .header-logo img {
-    max-height: 44px; /* logo más compacto */
+    max-height: 44px;
 }
 
-/* Ocultar el logo en el header cuando está arriba (estado inicial)
-   y mostrarlo solo cuando el header se vuelve sticky al hacer scroll */
 .hero-video-header .header-logo {
   opacity: 0;
   visibility: hidden;
@@ -6228,17 +6220,15 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
 .sticky-wrapper.sticky .header-logo {
   opacity: 1;
   visibility: visible;
-  max-height: 56px; /* tamaño visible al hacer scroll */
+  max-height: 56px;
   transform: translateY(0);
 }
 
-/* Menú ligeramente más pequeño para caber en header compacto */
 .hero-video-header .main-menu a {
   font-size: 14px;
   padding: 6px 8px;
 }
 
-/* Estado sticky (al hacer scroll): fondo blanco y colores oscuros */
 .sticky-wrapper.sticky {
   position: fixed;
   top: 0;
@@ -6261,13 +6251,11 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
   color: #151515 !important;
 }
 
-/* Transition for logo/icon color swap if needed */
 .hero-video-header .header-logo img,
 .sticky-wrapper.sticky .header-logo img {
   transition: max-height 220ms ease, opacity 220ms ease;
 }
 
-/* CONTENIDO ARRIBA DEL VIDEO Y OVERLAY */
 .hero-video-layout .container {
     position: relative;
     z-index: 10;
@@ -6281,10 +6269,10 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     text-align: left;
 }
 
-/* LOGO DENTRO DEL HERO */
 .hero-logo-wrap {
     position: relative;
     z-index: 12;
+    margin: 0 !important;
 }
 
 .hero-corporate-logo {
@@ -6293,14 +6281,12 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     height: auto;
 }
 
-/* BOTÓN PLAY */
 .hero-play-wrap {
     position: relative;
     z-index: 12;
     display: inline-flex;
 }
 
-/* IMPORTANTE: cancela la posición absoluta heredada de .hero-1 .play-btn */
 .hero-video-layout .hero-play-btn {
     position: relative !important;
     top: auto !important;
@@ -6315,7 +6301,6 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     cursor: pointer;
 }
 
-/* CÍRCULO DEL PLAY */
 .play-icon-box {
     width: 70px;
     height: 70px;
@@ -6354,7 +6339,6 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     }
 }
 
-/* TEXTO */
 .hero-video-content .hero-subtitle {
     color: var(--yellow-tepeyac);
 }
@@ -6368,7 +6352,6 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     color: #ffffff;
 }
 
-/* MENÚ */
 .hero-video-header .main-menu a,
 .hero-video-header .main-menu ul li.menu-item-has-children > a:after {
   color: #151515;
@@ -6390,13 +6373,11 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
   transition: color 0.3s;
 }
 
-/* Estado activo/hover del selector de idioma: verde institucional */
 .lang-link.active,
 .lang-link:hover {
   color: var(--green-tepeyac) !important;
 }
 
-/* Forzar el color verde también en header transparente y en sticky */
 .hero-video-header .lang-link.active {
   color: var(--yellow-color) !important;
 }
@@ -6414,7 +6395,6 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     color: var(--yellow-tepeyac);
 }
 
-/* RESPONSIVE */
 @media (max-width: 991px) {
     .hero-video-content {
         padding: 180px 0 130px 0;
@@ -6463,14 +6443,9 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     }
 }
 
-/*gt*/
 
-
-
-/*brands*/
 /* ==============================
    NUESTRAS MARCAS - CORPORATIVO
-   Paleta: grafito / carbón / gris / acento cálido
 ============================== */
 
 :root {
@@ -6827,21 +6802,18 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-/* Primera card detrás */
 .brand-card.is-behind-1 {
     z-index: 8;
     transform: translateY(0) translateX(0) scale(1);
     filter: brightness(0.78) saturate(0.82);
 }
 
-/* Segunda card detrás */
 .brand-card.is-behind-2 {
     z-index: 7;
     transform: translateY(64px) translateX(72px) scale(0.88);
     filter: brightness(0.58) saturate(0.65);
 }
 
-/* En cards traseras solo mostramos imagen */
 .brand-card.is-behind-1 .brand-content-container,
 .brand-card.is-behind-2 .brand-content-container,
 .brand-card.is-behind-1 .brand-overlay,
@@ -7165,16 +7137,19 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
 
 .hero-brand-play-row {
     width: 100%;
+    max-width: 1200px;
+    margin-left: auto; 
+    margin-right: auto;
     min-height: 280px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 40px;
-  position: relative;
-  z-index: 12;
+    justify-content: center; /
+    gap: 80px; 
+    position: relative;
+    z-index: 12;
+    padding: 0 20px;
 }
 
-.hero-logo-wrap,
 .hero-play-wrap {
     position: relative;
     z-index: 12;
@@ -7186,7 +7161,6 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     height: auto;
 }
 
-/* Mantiene el botón libre de la posición absoluta heredada */
 .hero-video-layout .hero-play-btn {
     position: relative !important;
     top: auto !important;
@@ -7196,7 +7170,6 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     margin: 0 !important;
 }
 
-/* Hace que el botón quede más visible del lado derecho */
 .hero-play-wrap {
     display: flex;
     justify-content: flex-end;
@@ -7213,7 +7186,6 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
   z-index:2;
 }
 
-/* Responsive */
 @media (max-width: 767px) {
     .hero-brand-play-row {
         min-height: auto;
@@ -7234,22 +7206,17 @@ ul.comment-list .ot-comment-item:first-child > .ot-post-comment {
     }
 }
 
-
-/* --- CORRECCIÓN FORZADA PARA EL MODAL DEL VIDEO --- */
-/* Si tu plantilla usa Magnific Popup (común por la clase popup-video) */
 .mfp-bg, 
 .mfp-wrap {
     z-index: 99999 !important;
     background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
-/* Si tu plantilla usa otra librería de modales estándar o Bootstrap Modals */
 .modal-backdrop, 
 .modal {
     z-index: 99999 !important;
 }
 
-/* Por si acaso la plantilla maneja una clase personalizada para el contenedor del popup */
 .popup-video-container, 
 .video-overlay-lightbox {
     z-index: 99999 !important;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Nuestras marcas - Grupo Tepeyac</title>
+    <title data-i18n="page.brands.title">Nuestras marcas - Grupo Tepeyac</title>
     <meta name="author" content="Grupo Tepeyac">
     <meta name="description" content="Grupo Tepeyac">
     <meta name="keywords" content="Grupo Tepeyac">
@@ -14,20 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicons - Place favicon.ico in the root directory -->
-    <!-- <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png"> -->
-    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/img/favicon//favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -81,21 +72,21 @@
         <div class="preloader-inner">
             <div class="tepeyac-pulse"></div>
             <span class="tepeyac-loader"></span>
-            <p class="preloader-text">Grupo Tepeyac</p>
+            <p class="preloader-text" data-i18n="preloader.text">Grupo Tepeyac</p>
         </div>
     </div>
 
-   <div class="ot-menu-wrapper-right">
+    <div class="ot-menu-wrapper-right">
         <div class="ot-menu-area text-center">
             <button class="ot-menu-toggle-right"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/bg/logo.svg" alt="Grupo Tepeyac"></a>
+                <a href="index.html"><img src="assets/img/bg/logo.svg" data-i18n-attr="alt:meta.title" alt="Grupo Tepeyac"></a>
             </div>
             <div class="ot-mobile-menu">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="brands.html">Nuestras marcas</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html" data-i18n="menu.home">Inicio</a></li>
+                    <li><a href="index.html#ourStory" data-i18n="menu.history">Nuestra historia</a></li>
+                    <li><a href="brands.html" data-i18n="menu.brands">Nuestras marcas</a></li>
                 </ul>
             </div>
         </div>
@@ -116,7 +107,7 @@ Hero Area
 
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="index.html"><img src="assets/img/bg/logo.svg" alt="Grupo Tepeyac"></a>
+                                <a href="index.html"><img src="assets/img/bg/logo.svg" data-i18n-attr="alt:meta.title" alt="Grupo Tepeyac"></a>
                             </div>
                         </div>
 
@@ -124,20 +115,21 @@ Hero Area
                             <nav class="main-menu d-none d-lg-inline-block">
                                 <ul>
                                     <li><a href="index.html" data-i18n="menu.home">Inicio</a></li>
-                                    <li><a href="#OurStory" data-i18n="menu.history">Nuestra historia</a></li>
+                                    <li><a href="index.html#ourStory" data-i18n="menu.history">Nuestra historia</a></li>
                                     <li><a href="brands.html" data-i18n="menu.brands">Nuestras marcas</a></li>
-                                    <li><a href="contact.html" data-i18n="menu.contact">Contacto</a></li>
                                 </ul>
                             </nav>
                         </div>
 
                         <div class="col-auto d-flex align-items-center gap-3 header-right-meta">
-                            <button class="ot-menu-toggle-right d-inline-block d-lg-none"><i class="fas fa-bars"></i></button>
+                            <button class="ot-menu-toggle-right d-inline-block d-lg-none"><i
+                                    class="fas fa-bars"></i></button>
                             <div class="lang-selector">
                                 <a href="#" class="lang-link active">ES</a> |
                                 <a href="#" class="lang-link">EN</a>
                             </div>
-                            <a href="https://www.instagram.com/grupotepeyacmexico/" target="_blank" class="header-insta-icon">
+                            <a href="https://www.instagram.com/grupotepeyacmexico/" target="_blank"
+                                class="header-insta-icon">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </div>
@@ -162,7 +154,7 @@ Hero Area
             <!-- Marca 1: Yak Alimentos -->
             <article class="brand-card active">
                 <div class="brand-bg">
-                    <img src="assets/img/bg/black.jpg" alt="Yak Alimentos">
+                    <img src="assets/img/bg/black.jpg" data-i18n-attr="alt:brand.yak.title" alt="Yak Alimentos">
                 </div>
 
                 <div class="brand-overlay"></div>
@@ -171,18 +163,18 @@ Hero Area
 
                     <div class="brand-content">
                         <div class="brand-logo">
-                            <img src="assets/img/bg/logo-yak.jpeg" alt="Yak Alimentos">
+                            <img src="assets/img/bg/logo-yak.jpeg" data-i18n-attr="alt:brand.yak.title" alt="Yak Alimentos">
                         </div>
 
-                        <h1>Yak Alimentos</h1>
+                        <h1 data-i18n="brand.yak.title">Yak Alimentos</h1>
 
-                        <p>
+                        <p data-i18n="brand.yak.text">
                             Líderes en distribución cárnica con presencia en toda la República Mexicana.
                         </p>
 
                         <div class="brand-actions">
                             <a href="https://yakalimentos.com.mx/" class="ot-btn style3">
-                                Navegar a la página
+                                <span data-i18n="btn.browse">Navegar a la página</span>
                                 <i class="fas fa-chevrons-right ms-2"></i>
                             </a>
                         </div>
@@ -196,7 +188,7 @@ Hero Area
                                 <span></span>
                             </div>
 
-                            <img src="assets/img/yak.png" alt="Preview Yak Alimentos">
+                            <img src="assets/img/yak.png" data-i18n-attr="alt:brand.yak.title" alt="Preview Yak Alimentos">
                         </div>
                     </div>
 
@@ -206,7 +198,7 @@ Hero Area
             <!-- Marca 2: Sterling Fresh -->
             <article class="brand-card">
                 <div class="brand-bg">
-                    <img src="assets/img/bg/sowing.jpeg" alt="Sterling Fresh">
+                    <img src="assets/img/bg/sowing.jpeg" data-i18n-attr="alt:brand.sterling.title" alt="Sterling Fresh">
                 </div>
 
                 <div class="brand-overlay"></div>
@@ -215,18 +207,18 @@ Hero Area
 
                     <div class="brand-content">
                         <div class="brand-logo">
-                            <img src="assets/img/bg/logo-sterling.jpeg" alt="Sterling Fresh">
+                            <img src="assets/img/bg/logo-sterling.jpeg" data-i18n-attr="alt:brand.sterling.title" alt="Sterling Fresh">
                         </div>
 
-                        <h1>Sterling Fresh</h1>
+                        <h1 data-i18n="brand.sterling.title">Sterling Fresh</h1>
 
-                        <p>
+                        <p data-i18n="brand.sterling.text">
                             Sterling Fresh impulsa una cadena confiable de abastecimiento para mercados que exigen
                             consistencia y calidad. </p>
 
                         <div class="brand-actions">
                             <a href="https://sterlingfreshusa.com/" class="ot-btn style3">
-                                Navegar a la página
+                                <span data-i18n="btn.browse">Navegar a la página</span>
                                 <i class="fas fa-chevrons-right ms-2"></i>
                             </a>
                         </div>
@@ -240,7 +232,7 @@ Hero Area
                                 <span></span>
                             </div>
 
-                            <img src="assets/img/sterling.png" alt="Preview Sterling Fresh">
+                            <img src="assets/img/sterling.png" data-i18n-attr="alt:brand.sterling.title" alt="Preview Sterling Fresh">
                         </div>
                     </div>
 
@@ -250,7 +242,7 @@ Hero Area
             <!-- Marca 3: Inmuebles -->
             <article class="brand-card">
                 <div class="brand-bg">
-                    <img src="assets/img/inmuebles.png" alt="Inmuebles">
+                    <img src="assets/img/inmuebles.png" data-i18n-attr="alt:brand.inmuebles.title" alt="Inmuebles">
                 </div>
 
                 <div class="brand-overlay"></div>
@@ -259,19 +251,19 @@ Hero Area
 
                     <div class="brand-content">
                         <div class="brand-logo">
-                            <img src="assets/img/inmuebles.png" alt="Inmuebles">
+                            <img src="assets/img/inmuebles.png" data-i18n-attr="alt:brand.inmuebles.title" alt="Inmuebles">
                         </div>
 
-                        <h1>Inmuebles</h1>
+                        <h1 data-i18n="brand.inmuebles.title">Inmuebles</h1>
 
-                        <p>
+                        <p data-i18n="brand.inmuebles.text">
                             Espacios, infraestructura y visión patrimonial para impulsar proyectos
                             sólidos y sostenibles.
                         </p>
 
                         <div class="brand-actions">
                             <a href="inmuebles.html" class="ot-btn style3">
-                                Navegar a la página
+                                <span data-i18n="btn.browse">Navegar a la página</span>
                                 <i class="fas fa-chevrons-right ms-2"></i>
                             </a>
                         </div>
@@ -285,7 +277,7 @@ Hero Area
                                 <span></span>
                             </div>
 
-                            <img src="assets/img/inmuebles.png" alt="Preview Inmuebles">
+                            <img src="assets/img/inmuebles.png" data-i18n-attr="alt:brand.inmuebles.title" alt="Preview Inmuebles">
                         </div>
                     </div>
 
@@ -294,15 +286,15 @@ Hero Area
 
         </div>
 
-        <button class="brand-next-btn" id="brandNextBtn" type="button" aria-label="Ver siguiente marca">
-            <span>Siguiente marca</span>
+        <button class="brand-next-btn" id="brandNextBtn" type="button" data-i18n-attr="aria-label:btn.nextBrand" aria-label="Ver siguiente marca">
+            <span data-i18n="btn.nextBrand">Siguiente marca</span>
             <i class="fas fa-arrow-down"></i>
         </button>
 
         <div class="brand-indicators" id="brandIndicators">
-            <button class="active" type="button" aria-label="Yak Alimentos"></button>
-            <button type="button" aria-label="Sterling Fresh"></button>
-            <button type="button" aria-label="Inmuebles"></button>
+            <button class="active" type="button" data-i18n-attr="aria-label:brand.yak.title" aria-label="Yak Alimentos"></button>
+            <button type="button" data-i18n-attr="aria-label:brand.sterling.title" aria-label="Sterling Fresh"></button>
+            <button type="button" data-i18n-attr="aria-label:brand.inmuebles.title" aria-label="Inmuebles"></button>
         </div>
 
     </section>
@@ -317,16 +309,14 @@ Hero Area
                     <!-- Columna 1: Branding Corporativo -->
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-widget widget-about">
-                            <img src="assets/img/logo-blanco.png" alt="Logo Grupo Tepeyac" class="footer-logo mb-4">
-                            <p class="footer-about-text">
+                            <img src="assets/img/logo-blanco.png" class="footer-logo mb-4" data-i18n-attr="alt:meta.title" alt="Logo Grupo Tepeyac">
+                            <p class="footer-about-text" data-i18n="footer.company">
                                 Soluciones integrales con talento y tecnología de vanguardia para el sector agrícola
                                 e
                                 industrial mexicano.
                             </p>
                             <div class="footer-social-links d-flex gap-3 mt-4">
-                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/grupotepeyacmexico/" class="social-link"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -334,11 +324,10 @@ Hero Area
                     <!-- Columna 2: Enlaces de Navegación -->
                     <div class="col-lg-2 col-md-6 col-6">
                         <div class="footer-widget">
-                            <h4 class="widget-title">Empresa</h4>
+                            <h4 class="widget-title" data-i18n="footer.company">Empresa</h4>
                             <ul class="footer-links-list list-unstyled">
-                                <li><a href="#tepeyac-bento-mv">Misión y Visión</a></li>
-                                <li><a href="#tepeyac-people-section">Nuestra Gente</a></li>
-                                <li><a href="contact.html">Contacto</a></li>
+                                <li><a href="#index.html#ourStory" data-i18n="menu.history">Nuestra historia</a></li>
+                                <li><a href="brands.html" data-i18n="menu.brands">Nuestras marcas</a></li>
                             </ul>
                         </div>
                     </div>
@@ -346,12 +335,12 @@ Hero Area
                     <!-- Columna 3: Nuestras Divisiones -->
                     <div class="col-lg-3 col-md-6 col-6">
                         <div class="footer-widget">
-                            <h4 class="widget-title">Divisiones</h4>
+                            <h4 class="widget-title" data-i18n="footer.divisions">Divisiones</h4>
                             <ul class="footer-links-list list-unstyled">
-                                <li><a href="#">Tepeyac Agropecuaria</a></li>
-                                <li><a href="#">Nutrición Vegetal</a></li>
-                                <li><a href="#">Semillas de Vanguardia</a></li>
-                                <li><a href="#">Logística y Distribución</a></li>
+                                <li data-i18n="division.tepeyac.title">Tepeyac Agropecuaria</li>
+                                <li data-i18n="division.innova.title">Nutrición Vegetal</li>
+                                <li data-i18n="division.tarco.title">Semillas de Vanguardia</li>
+                                <li data-i18n="division.lazaro.title">Logística y Distribución</li>
                             </ul>
                         </div>
                     </div>
@@ -359,19 +348,19 @@ Hero Area
                     <!-- Columna 4: Contacto Oficial -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="widget-title">Contacto Directo</h4>
+                            <h4 class="widget-title" data-i18n="footer.contact">Contacto Directo</h4>
                             <ul class="footer-contact-info list-unstyled">
                                 <li class="d-flex align-items-start mb-3">
                                     <i class="fas fa-map-marker-alt me-3 mt-1 text-accent"></i>
-                                    <span>México, CDMX</span>
+                                    <span data-i18n="footer.address">México, CDMX</span>
                                 </li>
                                 <li class="d-flex align-items-start mb-3">
                                     <i class="fas fa-phone-alt me-3 mt-1 text-accent"></i>
-                                    <a href="tel:+520000000000">+52 (000) 000-0000</a>
+                                    <a href="tel:+520000000000" data-i18n="footer.phone">+52 (000) 000-0000</a>
                                 </li>
                                 <li class="d-flex align-items-start">
                                     <i class="fas fa-envelope me-3 mt-1 text-accent"></i>
-                                    <a href="mailto:contacto@grupotepeyac.com.mx">contacto@grupotepeyac.com.mx</a>
+                                    <a href="mailto:contacto@grupotepeyac.com.mx" data-i18n="footer.email">contacto@grupotepeyac.com.mx</a>
                                 </li>
                             </ul>
                         </div>
@@ -385,13 +374,9 @@ Hero Area
         <div class="footer-bottom-wrap py-4">
             <div class="container">
                 <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-                    <p class="copyright-text mb-0 text-center text-md-start">
+                    <p class="copyright-text mb-0 text-center text-md-start" data-i18n="footer.copyright">
                         &copy; 2026 <strong>Grupo Tepeyac México</strong>. Todos los derechos reservados.
                     </p>
-                    <div class="footer-legal-links d-flex gap-4">
-                        <a href="#">Aviso de Privacidad</a>
-                        <a href="#">Términos y Condiciones</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -431,6 +416,8 @@ Hero Area
     <!-- Isotope Filter -->
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Shared translations and language switcher -->
+    <script src="assets/js/translations.js"></script>
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
 
