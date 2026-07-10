@@ -3898,22 +3898,78 @@ a.text-theme:hover,
   font-weight: 600;
 }
 
-/* Ajustes Responsivos */
-@media (max-width: 768px) {
+/* Ajustes Responsivos - Mobile improvements: horizontal scroll, accessible targets, no overflow */
+@media (max-width: 767.98px) {
   .custom-corporate-tabs {
-    flex-direction: column;
-    width: 100%;
-    gap: 6px;
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 12px !important;
+    padding: 8px 12px !important;
+    justify-content: flex-start !important;
+    white-space: nowrap !important;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  /* hide webkit scrollbar while preserving scrollability */
+  .custom-corporate-tabs::-webkit-scrollbar {
+    display: none;
+    height: 6px;
+  }
+
+  .custom-corporate-tabs .nav-item {
+    flex: 0 0 auto;
   }
 
   .custom-corporate-tabs .nav-link {
+    padding: 10px 16px;
+    min-height: 44px; /* accessible touch target */
+    white-space: nowrap;
     border-radius: 10px !important;
     text-align: center;
+    font-size: 0.92rem;
   }
 
   .custom-corporate-content {
-    border-radius: 16px;
+    border-radius: 12px;
+    padding: 14px !important;
   }
+
+  /* Badge/icon container: make images fit and avoid overflow */
+  .icon-box-badge {
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+  }
+
+  .icon-box-badge img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 8px;
+  }
+
+  /* Specific limit for the agrícola panel to prevent logo overflow */
+  #pills-agricola .icon-box-badge img {
+    max-height: 72px;
+  }
+
+  /* Focus ring for keyboard users */
+  .custom-corporate-tabs .nav-link:focus-visible {
+    outline: 3px solid var(--yellow-tepeyac);
+    outline-offset: 3px;
+  }
+
+  /* Ensure metric cards stack nicely */
+  .metric-card {
+    padding: 16px;
+  }
+}
+
 }
 
 /*human capital*/
@@ -6666,6 +6722,104 @@ ul.comment-list .ot-comment-item:first-child>.ot-post-comment {
 .hero-video-content .hero-title .title2 {
   color: #ffffff;
 }
+
+/* =========================
+   Mobile fixes requested
+   - Move play button below logo/text
+   - Prevent hero text overflow
+   - Make division tabs horizontally scrollable on small screens
+   - Fix Agrícola header icons wrapping to avoid horizontal overflow
+   ========================= */
+
+@media (max-width: 991.98px) {
+  .hero-brand-play-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    gap: 1rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    min-height: auto !important;
+  }
+
+  .hero-left-stack {
+    max-width: 100% !important;
+    align-items: center !important;
+  }
+
+  .hero-text-content-block {
+    text-align: center !important;
+  }
+
+  .hero-title {
+    font-size: 1.9rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-play-wrap {
+    order: 2;
+    margin-left: 0 !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .hero-play-btn {
+    margin: 0 auto !important;
+  }
+
+  /* ensure long words wrap and avoid horizontal scroll */
+  .hero-text-content-block h1,
+  .hero-text-content-block p,
+  .hero-text-content-block span,
+  .hero-left-stack {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+/* Tabs: make them horizontally scrollable on small viewports */
+@media (max-width: 768px) {
+  .custom-corporate-tabs {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    justify-content: flex-start !important;
+  }
+
+  .custom-corporate-tabs .nav-link {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    padding: 10px 18px !important;
+    margin-right: 6px !important;
+  }
+
+  .custom-corporate-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .custom-corporate-tabs {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Reduce icon badge size to avoid overflow in tight cards */
+  .icon-box-badge {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  /* Agricola header row: allow wrap/column to avoid horizontal overflow */
+  #pills-agricola > .d-flex,
+  #pills-agricola .d-flex.align-items-center {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  #pills-agricola .d-flex > div:last-child {
+    flex: 1 1 100% !important;
+  }
+}
+
 
 .hero-video-header .main-menu a,
 .hero-video-header .main-menu ul li.menu-item-has-children>a:after {
