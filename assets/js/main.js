@@ -528,7 +528,6 @@
     }
     popupSideMenu(".sidemenu-info", ".sideMenuInfo", ".sideMenuCls", "show");
     popupSideMenu(".sidemenu-cart", ".sideMenuCart", ".sideMenuCls", "show");
-    popupSideMenu(".popup-search-box", ".searchBoxToggler", ".searchClose", "show");
 
     /*----------- 12. Magnific Popup ----------*/
     /* magnificPopup img view */
