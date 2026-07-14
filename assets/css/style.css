@@ -495,20 +495,6 @@ h6 {
   animation: tepeyac-pulse-ani 1.8s infinite ease-in-out;
 }
 
-/* --- ANIMACIÓN 2: El Anillo Giratorio (Spinner) --- */
-/* .tepeyac-loader {
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  border-top-color: #ffffff;
-  /* Arco blanco que gira 
-  display: inline-block;
-  animation: tepeyac-spin-ani 1s infinite linear;
-  margin-bottom: 20px;
-  z-index: 2;
-} */
-
 /* --- TEXTO DE CARGA --- */
 .preloader-text {
   color: #ffffff;
@@ -630,7 +616,7 @@ h6 {
   width: 44px;
   height: 44px;
   border: none;
-  background-color: var(--theme-color);
+  background-color: #13241c;
   color: var(--white-color);
   border-radius: 6px;
   font-size: 18px;
@@ -1509,19 +1495,6 @@ h6 {
   min-height: 80vh;
 }
 
-/* .history-parallax-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/bg/us.png');
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 1;
-} */
-
 .history-overlay {
   position: absolute;
   top: 0;
@@ -1550,14 +1523,6 @@ h6 {
   line-height: 1.8;
   color: #fff;
 }
-
-/* .tepeyac-bento-mv {
-  background-color: #0b2f1d;
-  color: #ffffff;
-  font-family: 'Inter', sans-serif;
-  overflow: hidden;
-  position: relative;
-} */
 
 .bento-intro-text {
   font-size: 1.7rem;
@@ -1650,6 +1615,16 @@ h6 {
   pointer-events: none;
 }
 
+@media (max-width: 767px) {
+  .pilar-gradient-overlay {
+    display: none !important;
+  }
+
+  .play-btn {
+    margin-top: 3px;
+  }
+}
+
 .pilar-media-img {
   width: 100%;
   height: 100%;
@@ -1728,7 +1703,6 @@ h6 {
 }
 
 
-/*division*/
 /* ==========================================
    CSS: SECCIÓN NAVEGACIÓN DE TABS (NUESTRAS EMPRESAS)
    ========================================== */
@@ -1741,7 +1715,6 @@ h6 {
   z-index: 3;
 }
 
-/* 2. Estilo General de los Botones de la Pestaña */
 .tepeyac-companies-tabs .nav-link {
   background-color: #FDFDFD !important;
   color: #555555 !important;
@@ -1757,7 +1730,6 @@ h6 {
   width: 100%;
 }
 
-/* Redondear esquinas en los extremos del bloque de pestañas */
 .tepeyac-companies-tabs .nav-item:first-child .nav-link {
   border-top-left-radius: 12px !important;
 }
@@ -1766,13 +1738,11 @@ h6 {
   border-top-right-radius: 12px !important;
 }
 
-/* Estados Hover en Pestañas */
 .tepeyac-companies-tabs .nav-link:hover {
   color: #0A2218 !important;
   background-color: #F8F7F4 !important;
 }
 
-/* 3. Estado Activo de la Pestaña Seleccionada */
 .tepeyac-companies-tabs .nav-link.active {
   color: #0A2218 !important;
   background-color: #ffffff !important;
@@ -1780,7 +1750,6 @@ h6 {
   box-shadow: 0 -8px 20px rgba(10, 34, 24, 0.03) !important;
 }
 
-/* Línea Dorada Característica Inferior */
 .tepeyac-companies-tabs .nav-link.active::after {
   content: '';
   position: absolute;
@@ -1792,7 +1761,6 @@ h6 {
   border-radius: 2px 2px 0 0;
 }
 
-/* 4. El Contenedor de Información Inferior */
 .tepeyac-companies-tabs .tab-content {
   background-color: #ffffff;
   border: 1px solid rgba(10, 34, 24, 0.06);
@@ -1803,7 +1771,6 @@ h6 {
   z-index: 2;
 }
 
-/* 5. Círculos de Logotipos Premium */
 .brand-circle-logo {
   width: 160px;
   height: 160px;
@@ -1831,7 +1798,6 @@ h6 {
   display: block;
 }
 
-/* 6. Utilidades e Interfaz de Métricas */
 .border-end-custom {
   border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -1842,17 +1808,14 @@ h6 {
   font-size: 1.8rem;
 }
 
-/* Para los textos descriptivos: legibilidad editorial */
 .pilar-desc,
 .tab-pane p {
   color: #4A4A4A;
-  /* Un gris oscuro suave en lugar de negro puro */
   font-size: 1.02rem;
   line-height: 1.7;
   font-weight: 400;
 }
 
-/* Efecto Hover interactivo para las filas de métricas o items */
 .metric-item-box {
   padding: 20px;
   background: #ffffff;
@@ -1867,14 +1830,12 @@ h6 {
   box-shadow: 0 12px 24px rgba(10, 34, 24, 0.05);
 }
 
-/* Letras capitulares o detalles en los títulos */
 .widget-title,
 .tab-pane h3 {
   letter-spacing: -0.5px;
   word-spacing: 1px;
 }
 
-/* 7. Responsividad Móvil */
 @media (max-width: 575.98px) {
   .border-end-custom {
     border-right: none;
@@ -1892,17 +1853,14 @@ h6 {
   .tepeyac-companies-tabs .tab-content {
     padding: 30px 20px;
   }
-  /* Evitar solapamiento con el footer en móvil */
   .tepeyac-divisions-section {
     padding-bottom: 160px;
     min-height: auto;
   }
 }
 
-/* 1. Contenedor de la barra de pestañas */
 .tepeyac-companies-tabs .nav-tabs {
   border-bottom: none;
-  /* Quitamos la línea fea por defecto de Bootstrap */
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -1910,14 +1868,11 @@ h6 {
   margin-bottom: 25px;
 }
 
-/* 2. Estilo base para cada pestaña individual (Item) */
 .tepeyac-companies-tabs .nav-link {
   flex: 1;
   background-color: #ffffff;
   color: #4A4A4A;
-  /* Texto pasivo legible */
   border: 1px solid rgba(0, 0, 0, 0.05);
-  /* Borde ultra fino entre pestañas */
   border-radius: 0;
   padding: 20px 15px;
   font-weight: 600;
@@ -1933,7 +1888,6 @@ h6 {
   position: relative;
 }
 
-/* Redondear esquinas externas del grupo de pestañas (Opcional, estilo pulido) */
 .tepeyac-companies-tabs .nav-item:first-child .nav-link {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -1944,24 +1898,19 @@ h6 {
   border-bottom-right-radius: 8px;
 }
 
-/* 3. Comportamiento al pasar el mouse (Hover) */
 .tepeyac-companies-tabs .nav-link:hover {
   color: #0A2218;
-  /* Verde Tepeyac */
   background-color: #FBFBFA;
   border-color: rgba(133, 97, 56, 0.15);
 }
 
-/* 4. PESTAÑA ACTIVA (Active State de tu diseño) */
 .tepeyac-companies-tabs .nav-link.active {
   color: #0A2218 !important;
-  /* Texto en verde corporativo */
   background-color: #ffffff !important;
   border-color: rgba(133, 97, 56, 0.2) !important;
   box-shadow: 0 10px 25px rgba(10, 34, 24, 0.04);
 }
 
-/* La línea dorada inferior característica del diseño activo */
 .tepeyac-companies-tabs .nav-link.active::after {
   content: '';
   position: absolute;
@@ -1969,13 +1918,10 @@ h6 {
   left: 10%;
   width: 80%;
   height: 4px;
-  /* Grosor de la barrita de acento */
   background-color: #856138;
-  /* Dorado Tepeyac */
   border-radius: 2px 2px 0 0;
 }
 
-/* Ajuste para los logotipos/iconos dentro de la pestaña */
 .tepeyac-companies-tabs .nav-link img {
   max-height: 35px;
   width: auto;
@@ -1985,21 +1931,17 @@ h6 {
 
 .tepeyac-companies-tabs .nav-link.active img {
   transform: scale(1.05);
-  /* Un micro-impulso visual al estar activo */
 }
 
-/* 5. El gran panel blanco contenedor inferior */
 .tepeyac-companies-tabs .tab-content {
   background-color: #ffffff;
   border-radius: 12px;
   border: 1px solid rgba(10, 34, 24, 0.05);
   box-shadow: 0 15px 45px rgba(10, 34, 24, 0.04);
-  /* Sombra suave idéntica al mockup */
   padding: 40px;
   overflow: hidden;
 }
 
-/*hasta aqui */
 
 .custom-corporate-content {
   border-radius: 0 0 20px 20px;
@@ -2098,7 +2040,6 @@ h6 {
     /* IE 10+ */
   }
 
-  /* hide webkit scrollbar while preserving scrollability */
   .custom-corporate-tabs::-webkit-scrollbar {
     display: none;
     height: 6px;
@@ -2280,11 +2221,6 @@ h6 {
 .mosaic-item:hover .mosaic-img {
   transform: scale(1.04);
 }
-
-/* 
-.mosaic-item:hover .mosaic-overlay {
-  background: linear-gradient(to top, rgba(11, 47, 29, 0.95) 0%, rgba(11, 47, 29, 0.2) 100%);
-} */
 
 @media (max-width: 767.98px) {
   .people-mosaic-grid {
@@ -2861,19 +2797,6 @@ h6 {
   color: #ffffff;
   font-weight: 800;
 }
-
-
-
-
-/* @media (max-width: 991.98px) {
-  .ot-hero-wrapper.hero-1 {
-    min-height: 85vh;
-  }
-
-  .hero-corporate-logo {
-    max-width: 140px;
-  }
-} */
 
 .hero-play-btn {
   position: relative !important;
