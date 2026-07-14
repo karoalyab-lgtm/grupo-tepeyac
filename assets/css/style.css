@@ -1333,11 +1333,32 @@ h6 {
   color: var(--theme-color);
 }
 
+.value-card-premium {
+  background-color: #81684b;
+  color: #0000;
+  padding: 50px 35px;
+  height: 100%;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+
+.value-card-premium:hover {
+  background-color: #113123;
+}
+
+.value-card-premium:hover .num-accent {
+  color: #856138;
+}
+
 /*-----------footer---------------------------*/
 
 /* --- CONTENEDOR GENERAL --- */
 .tepeyac-footer {
-  background-color: #051a10;
+  background-color: #13241c;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
 }
@@ -1466,16 +1487,29 @@ h6 {
   color: var(--yellow-tepeyac);
 }
 
-.tepeyac-history-section {
+.tepeyac-history-section,
+.tepeyac-values-grid-section,
+.tepeyac-stats-impact-section {
   position: relative;
   min-height: 80vh;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color: #0b2f1d;
+  background-color: #f6f6f6 !important;
+  padding: 100px 0 100px 0;
+  position: relative;
+  z-index: 2;
+  margin-top: -4vh;
 }
 
-.history-parallax-bg {
+.tepeyac-pillars-section,
+.tepeyac-divisions-section {
+  background-color: #f1f3f2 !important;
+  padding: 100px 0 100px 0;
+  min-height: 80vh;
+}
+
+/* .history-parallax-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -1486,7 +1520,7 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
-}
+} */
 
 .history-overlay {
   position: absolute;
@@ -1517,23 +1551,24 @@ h6 {
   color: #fff;
 }
 
-.tepeyac-bento-mv {
+/* .tepeyac-bento-mv {
   background-color: #0b2f1d;
   color: #ffffff;
   font-family: 'Inter', sans-serif;
   overflow: hidden;
   position: relative;
-}
+} */
 
 .bento-intro-text {
   font-size: 1.7rem;
   line-height: 1.4;
-  color: #ffffff;
+  color: #0A2218;
+  ;
   font-weight: 400;
 }
 
 .highlight-orange {
-  color: var(--yellow-tepeyac);
+  color: #856138;
   font-weight: 600;
 }
 
@@ -1593,6 +1628,35 @@ h6 {
 
 .border-white-10 {
   border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.pilar-center-media-wrapper {
+  width: 100%;
+  height: 500px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  background-color: #F8F7F4;
+}
+
+.pilar-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(243, 243, 241) 1%, rgba(248, 247, 244, 0.8) 5%, rgba(248, 247, 244, 0) 15%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.pilar-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  z-index: 1;
+  display: block;
 }
 
 @media (min-width: 576px) {
@@ -1665,6 +1729,277 @@ h6 {
 
 
 /*division*/
+/* ==========================================
+   CSS: SECCIÓN NAVEGACIÓN DE TABS (NUESTRAS EMPRESAS)
+   ========================================== */
+
+
+.tepeyac-companies-tabs .nav-tabs {
+  border-bottom: none !important;
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 3;
+}
+
+/* 2. Estilo General de los Botones de la Pestaña */
+.tepeyac-companies-tabs .nav-link {
+  background-color: #FDFDFD !important;
+  color: #555555 !important;
+  border: 1px solid rgba(10, 34, 24, 0.06) !important;
+  padding: 22px 10px !important;
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  border-radius: 0 !important;
+  position: relative;
+  width: 100%;
+}
+
+/* Redondear esquinas en los extremos del bloque de pestañas */
+.tepeyac-companies-tabs .nav-item:first-child .nav-link {
+  border-top-left-radius: 12px !important;
+}
+
+.tepeyac-companies-tabs .nav-item:last-child .nav-link {
+  border-top-right-radius: 12px !important;
+}
+
+/* Estados Hover en Pestañas */
+.tepeyac-companies-tabs .nav-link:hover {
+  color: #0A2218 !important;
+  background-color: #F8F7F4 !important;
+}
+
+/* 3. Estado Activo de la Pestaña Seleccionada */
+.tepeyac-companies-tabs .nav-link.active {
+  color: #0A2218 !important;
+  background-color: #ffffff !important;
+  border-bottom-color: transparent !important;
+  box-shadow: 0 -8px 20px rgba(10, 34, 24, 0.03) !important;
+}
+
+/* Línea Dorada Característica Inferior */
+.tepeyac-companies-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 3px;
+  background-color: #856138;
+  border-radius: 2px 2px 0 0;
+}
+
+/* 4. El Contenedor de Información Inferior */
+.tepeyac-companies-tabs .tab-content {
+  background-color: #ffffff;
+  border: 1px solid rgba(10, 34, 24, 0.06);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 20px 50px rgba(10, 34, 24, 0.05);
+  padding: 50px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* 5. Círculos de Logotipos Premium */
+.brand-circle-logo {
+  width: 160px;
+  height: 160px;
+  background-color: #ffffff;
+  border: 1px solid rgba(133, 97, 56, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-shadow: 0 12px 30px rgba(10, 34, 24, 0.06);
+  transition: transform 0.32s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.32s;
+}
+
+.brand-circle-logo:hover {
+  transform: scale(1.03) translateY(-6px);
+  border-color: #856138;
+  box-shadow: 0 18px 36px rgba(133, 97, 56, 0.12);
+}
+
+.brand-circle-logo img {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* 6. Utilidades e Interfaz de Métricas */
+.border-end-custom {
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.tepeyac-companies-tabs .tab-pane h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* Para los textos descriptivos: legibilidad editorial */
+.pilar-desc,
+.tab-pane p {
+  color: #4A4A4A;
+  /* Un gris oscuro suave en lugar de negro puro */
+  font-size: 1.02rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Efecto Hover interactivo para las filas de métricas o items */
+.metric-item-box {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid rgba(133, 97, 56, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.metric-item-box:hover {
+  transform: translateY(-4px);
+  border-color: #856138;
+  box-shadow: 0 12px 24px rgba(10, 34, 24, 0.05);
+}
+
+/* Letras capitulares o detalles en los títulos */
+.widget-title,
+.tab-pane h3 {
+  letter-spacing: -0.5px;
+  word-spacing: 1px;
+}
+
+/* 7. Responsividad Móvil */
+@media (max-width: 575.98px) {
+  .border-end-custom {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+  }
+
+  .brand-circle-logo {
+    width: 46px;
+    height: 46px;
+    padding: 5px;
+  }
+
+  .tepeyac-companies-tabs .tab-content {
+    padding: 30px 20px;
+  }
+  /* Evitar solapamiento con el footer en móvil */
+  .tepeyac-divisions-section {
+    padding-bottom: 160px;
+    min-height: auto;
+  }
+}
+
+/* 1. Contenedor de la barra de pestañas */
+.tepeyac-companies-tabs .nav-tabs {
+  border-bottom: none;
+  /* Quitamos la línea fea por defecto de Bootstrap */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 25px;
+}
+
+/* 2. Estilo base para cada pestaña individual (Item) */
+.tepeyac-companies-tabs .nav-link {
+  flex: 1;
+  background-color: #ffffff;
+  color: #4A4A4A;
+  /* Texto pasivo legible */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Borde ultra fino entre pestañas */
+  border-radius: 0;
+  padding: 20px 15px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Redondear esquinas externas del grupo de pestañas (Opcional, estilo pulido) */
+.tepeyac-companies-tabs .nav-item:first-child .nav-link {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.tepeyac-companies-tabs .nav-item:last-child .nav-link {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* 3. Comportamiento al pasar el mouse (Hover) */
+.tepeyac-companies-tabs .nav-link:hover {
+  color: #0A2218;
+  /* Verde Tepeyac */
+  background-color: #FBFBFA;
+  border-color: rgba(133, 97, 56, 0.15);
+}
+
+/* 4. PESTAÑA ACTIVA (Active State de tu diseño) */
+.tepeyac-companies-tabs .nav-link.active {
+  color: #0A2218 !important;
+  /* Texto en verde corporativo */
+  background-color: #ffffff !important;
+  border-color: rgba(133, 97, 56, 0.2) !important;
+  box-shadow: 0 10px 25px rgba(10, 34, 24, 0.04);
+}
+
+/* La línea dorada inferior característica del diseño activo */
+.tepeyac-companies-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  /* Grosor de la barrita de acento */
+  background-color: #856138;
+  /* Dorado Tepeyac */
+  border-radius: 2px 2px 0 0;
+}
+
+/* Ajuste para los logotipos/iconos dentro de la pestaña */
+.tepeyac-companies-tabs .nav-link img {
+  max-height: 35px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.tepeyac-companies-tabs .nav-link.active img {
+  transform: scale(1.05);
+  /* Un micro-impulso visual al estar activo */
+}
+
+/* 5. El gran panel blanco contenedor inferior */
+.tepeyac-companies-tabs .tab-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(10, 34, 24, 0.05);
+  box-shadow: 0 15px 45px rgba(10, 34, 24, 0.04);
+  /* Sombra suave idéntica al mockup */
+  padding: 40px;
+  overflow: hidden;
+}
+
+/*hasta aqui */
 
 .custom-corporate-content {
   border-radius: 0 0 20px 20px;
@@ -1908,7 +2243,7 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(11, 47, 29, 0.85) 0%, rgba(0, 0, 0, 0) 60%);
+  background: linear-gradient(to top, rgba(16, 17, 16, 0.85) 0%, rgba(0, 0, 0, 0) 60%);
   display: flex;
   align-items: flex-end;
   padding: 30px;
@@ -1946,9 +2281,10 @@ h6 {
   transform: scale(1.04);
 }
 
+/* 
 .mosaic-item:hover .mosaic-overlay {
   background: linear-gradient(to top, rgba(11, 47, 29, 0.95) 0%, rgba(11, 47, 29, 0.2) 100%);
-}
+} */
 
 @media (max-width: 767.98px) {
   .people-mosaic-grid {
@@ -2526,6 +2862,9 @@ h6 {
   font-weight: 800;
 }
 
+
+
+
 /* @media (max-width: 991.98px) {
   .ot-hero-wrapper.hero-1 {
     min-height: 85vh;
@@ -2601,11 +2940,7 @@ h6 {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(90deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 42%,
-      rgba(0, 0, 0, 0.5) 72%,
-      rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .hero-video-header {
@@ -2655,6 +2990,67 @@ h6 {
   padding: 6px 8px;
 }
 
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 12vh 0;
+  color: #ffffff;
+}
+
+.hero-content .hero-corporate-logo.small-logo {
+  max-height: 96px;
+  width: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.hero-tag {
+  display: inline-block;
+  color: #856138;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  line-height: 1.05;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0.5rem 0 1rem;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+}
+
+.hero-content h1 span {
+  color: #856138;
+}
+
+.btn-gold-tepeyac {
+  background: linear-gradient(90deg, #856138 0%, #b78b45 100%);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.65rem 1.2rem;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 8px 24px rgba(133, 97, 56, 0.18);
+}
+
+@media (max-width: 991px) {
+  .hero-content {
+    padding: 8vh 0;
+  }
+
+  .hero-content .col-lg-8 {
+    padding-right: 0;
+  }
+
+  .hero-corporate-logo.small-logo {
+    max-height: 72px;
+  }
+}
+
 .sticky-wrapper.sticky {
   position: fixed;
   top: 0;
@@ -2668,7 +3064,9 @@ h6 {
 }
 
 .sticky-wrapper.sticky .menu-area {
-  background-color: var(--white-color) !important;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(133, 97, 56, 0.1);
+  box-shadow: 0 4px 20px rgba(10, 34, 24, 0.02);
 }
 
 .sticky-wrapper.sticky .main-menu a,
@@ -3121,6 +3519,7 @@ h6 {
 /* ==============================
    CONTENIDO DE TEXTO
 ============================== */
+
 
 .brand-content {
   max-width: 660px;

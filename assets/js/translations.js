@@ -6,7 +6,7 @@
             'menu.home': 'Home',
             'menu.history': 'Our History',
             'menu.contact': 'Our History',
-            'menu.brands': 'Our Brands',
+            'menu.brands': 'Our Companies',
             'menu.contact_us': 'Contact',
             'hero.subtitle': 'Leading Agroindustrial Sustainability',
             'hero.title': 'Innovation that Feeds the Future',
@@ -111,7 +111,7 @@
                 'mosaic.tag3': 'Development',
                 'mosaic.h4_3': 'Continuous Growth',
             'footer.company': 'Company',
-            'footer.brands': 'Our Brands',
+            'footer.brands': 'Our Companies',
             'footer.divisions': 'Divisions',
             'footer.contact': 'Direct Contact',
             'footer.address': 'Mexico, CDMX',
@@ -127,7 +127,7 @@
             'brand.inmuebles.title': 'Real Estate',
             'brand.inmuebles.text': 'Spaces, infrastructure and patrimonial vision to drive solid and sustainable projects.'
             ,
-            'page.brands.title': 'Our Brands - Grupo Tepeyac'
+            'page.brands.title': 'Our Companies - Grupo Tepeyac'
         },
         es: {
             'meta.title': 'Grupo Tepeyac',
@@ -135,7 +135,7 @@
             'menu.home': 'Inicio',
             'menu.history': 'Nuestra historia',
             'menu.contact': 'Nuestra historia',
-            'menu.brands': 'Nuestras marcas',
+            'menu.brands': 'Nuestras empresas',
             'menu.contact_us': 'Contacto',
             'hero.subtitle': 'Vanguardia y Sustentabilidad Agroindustrial',
             'hero.title': 'Innovación que Alimenta al Futuro',
@@ -240,7 +240,7 @@
                 'mosaic.tag3': 'Desarrollo',
                 'mosaic.h4_3': 'Crecimiento Continuo',
             'footer.company': 'Empresa',
-            'footer.brands': 'Nuestras Marcas',
+            'footer.brands': 'Nuestras Empresas',
             'footer.divisions': 'Divisiones',
             'footer.contact': 'Contacto Directo',
             'footer.address': 'México, CDMX',
@@ -256,7 +256,7 @@
             'brand.inmuebles.title': 'Inmuebles',
             'brand.inmuebles.text': 'Espacios, infraestructura y visión patrimonial para impulsar proyectos sólidos y sostenibles.'
             ,
-            'page.brands.title': 'Nuestras marcas - Grupo Tepeyac'
+            'page.brands.title': 'Nuestras empresas - Grupo Tepeyac'
         }
     };
 
